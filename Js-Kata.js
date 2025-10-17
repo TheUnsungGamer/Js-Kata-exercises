@@ -72,4 +72,75 @@ let ticTacToe = [
     ["", "", ""]
 ];   
 
-console.log(ticTacToe.length)
+console.log(ticTacToe)
+// Simulate a complete Tic-Tac-Toe game in the console (X wins)
+// Run this script with the Live Server extension to see results in the browser console
+ticTacToe[0][2] = "x";
+ticTacToe[2][0] = "o";
+ticTacToe[1][1] = "x";
+ticTacToe[0][0] = "x";
+ ticTacToe[2][2] = "o";
+ ticTacToe[0][1] = "x";
+
+
+ // kata push method to add element to end of an array
+let languages = [];
+languages.push("Python");
+languages.push("Haskell");
+languages.push("JavaScript");
+languages.push("Rust");
+console.log(languages)
+
+
+// unshift method to add element to beginning of an array
+
+languages.unshift("Erlang");
+console.log(languages);
+languages.unshift("C");
+languages.unshift("Fortran");
+console.log(languages)
+
+
+// pop method to mutate array, removing last element
+
+languages.pop();
+//Rust is removed from the arry confirmed with console.log(languages);
+console.log(languages);
+
+// interacting with .pop() with a syntax literal
+let bestLanguage = languages.pop();
+let message = `My favorite language is ${bestLanguage}.`;
+console.log(message)
+
+// Javascript confirmed removed from the array with console.log(languages)  [5] elements left in array 
+console.log(languages);
+
+// using shift method to remove first element from the array [4] elements left in the array
+let worstLanguage = languages.shift();
+message = `My least fabvorite language is ${worstLanguage}`
+
+console.log(message);
+// console.log(languages) confirms [4] elements left in the array
+console.log(languages)
+
+// 4 methods above practiced and obsrerved in the console .pop() .push() .unshift() .shift()
+
+//colors of the rainbow starting with "Green", added using .push(), .unshift(). .pop() used to removed mistakes.
+let rainbow = [];
+
+rainbow.push("Green");
+rainbow.unshift("Yellow");
+console.log(rainbow);
+rainbow.push("Orange");
+rainbow.push("Red");
+console.log(rainbow);
+rainbow.pop();
+rainbow.pop();
+console.log(rainbow);
+rainbow.unshift("Orange");
+rainbow.unshift("Red");
+console.log(rainbow);
+rainbow.push("Blue");
+rainbow.push("Indigo");
+rainbow.push("Violet");
+console.log(rainbow)
