@@ -143,4 +143,76 @@ console.log(rainbow);
 rainbow.push("Blue");
 rainbow.push("Indigo");
 rainbow.push("Violet");
-console.log(rainbow)
+console.log(rainbow);
+
+
+// combining arrays together with .concat 
+let fish = ["Salmon", "Cod", "Trout"];
+let mammals = ["Sheep", "Cat", "Tiger"];
+let animals = fish.concat(mammals);
+console.log(animals);
+
+//combining 3 arrays with multiple arrays passed as arguments with .concat()
+let originals = ["Hope", "Empire", "Jedi"];
+let prequels = ["Phantom", "Clones", "Sith"];
+let sequels = ["Awakens", "Last", "Rise"];
+let starWars = prequels.concat(originals, sequels);
+console.log(starWars);
+
+//finding an element with .indexOf() with, showing a return of -1 if element is not found
+let sizes = ["Small", "Medium", "Large"];
+console.log(sizes.indexOf("Medium"));
+console.log(sizes.indexOf("Huge"));
+
+let flagOfTheUnitedStatesOfAmerica = ["Red", "White", "Blue"];
+console.log(flagOfTheUnitedStatesOfAmerica.indexOf("Blue"));
+//Even though "Blue" is found twice in the array, .indexOf() returns only the index of first occurrence
+let flagOfArgentina = ["Blue", "White", "Blue"];
+console.log(flagOfArgentina.indexOf("Blue"));
+
+// Turning array into a string with .join()
+let beatles = ["John", "Paul", "george", "Ringo"];
+console.log(beatles.join());
+//join the array with no seperator by passing double-quotes "" as an argument
+console.log(beatles.join(""));
+// set each element on a new line  \n with amepersand & and a space
+console.log(beatles.join("&\n"));
+
+//example shows how to call array methods directly on array literals, rather than saving array into variable first
+console.log([100, true, false, "hi"].join("-"));
+
+console.log(["X", "X", "X"].join(""));
+
+// Object literal with 3 keys: "title", "released", "director" and associated values. Multiple lines for ease of read
+let casablanca = {
+    "title": "Casablanca",
+    "released": 1942,
+    "director": "Michael Curtiz"
+};
+console.log(casablanca);
+
+//valid identifiers and special characters. quotes must wrap whtie space "," "#", "*"
+let obj = {key1: 1, key_2: 2, "key 3": 3, "key#4": 4};
+console.log(obj)
+
+//accessing object values by calling name of object with string key in square brackets []
+
+console.log(obj["key 3"]);
+
+console.log(casablanca["title"]);
+
+
+// for keys that are valid identifiers, use dot notation instead of bracket notation, with key name coming after dot
+console.log(obj.key_2);
+//methods are called directly on the array you want to work on
+//setting values starting with empty object then dot and bracket notation
+let dictionary = {};
+dictionary.mouse = "A small rodent";
+dictionary["computer mouse"] = "A pointing device for computers";
+console.log(dictionary);
+
+//changing value follows same syntax
+dictionary.mouse = "A furry rodent";
+console.log(dictionary);
+
+
