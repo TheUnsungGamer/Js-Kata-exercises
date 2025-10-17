@@ -215,4 +215,27 @@ console.log(dictionary);
 dictionary.mouse = "A furry rodent";
 console.log(dictionary);
 
+//getting an array with all the keys using Obkect.keys() console logs (3) ['Kiki', 'Mei', 'Mooona]
 
+let cats = { "Kiki": "black and white", "Mei": "tabby", "Moona": "grey"};
+ console.log(Object.keys(cats))
+
+
+ //getting an array of hte keys and values of an object using Object.entries()
+ let chromosomes = {
+    koala: 16,
+    snail: 24,
+    giraffe: 30,
+    cat: 38,
+ };
+ console.log(Object.entries(chromosomes));
+
+ //assigning multiple objects together with Object.asign()
+ let physical = {pages: 208, binding: "hardcover"};
+ let contents = {genre: "Fiction", subgenre: "Mystery"};
+ let book = {};
+ //1st argument is the target in this case {empty object}, remaining arguments are sources
+ Object.assign(book, physical, contents);
+ console.log(book);
+
+ 
