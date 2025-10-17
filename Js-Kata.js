@@ -1,3 +1,5 @@
+const { jsx } = ("react/jsx-runtime");
+
 let inputText = " Here is my input   ";
 inputText.trim();
 console.log(inputText)
@@ -238,4 +240,52 @@ let cats = { "Kiki": "black and white", "Mei": "tabby", "Moona": "grey"};
  Object.assign(book, physical, contents);
  console.log(book);
 
- 
+ //nested structure using literals to create an array of objects
+ let trilogies = [
+    {
+        title: "His Dark Materials",
+        author: "Phillip Pullman",
+        books: ["Northern Lights", "The Subtle Knife", "The Amber Spyglass"]
+    },
+    {
+        title: "Broken Earth",
+        author: "N. K. Jenisin",
+        books: ["The Fifth Season", "The Obeliesk Gate", "The Stone Sky"]
+    }
+ ];
+//accessing the inner array requires a combination of array indexing and dot notation
+console.log(trilogies[1].books[0]);
+
+//alternative to making nested structures creating objects containing inner elements
+let penny = {name: "Penny,", value: 1, weight: 2.5 };
+let nickel = {name: "Nickel", value: 5, weight: 5 };
+let dime = {name: "Dime", value: 10, weight: 2.268 };
+let quarter = {name: "Quarter", value: 25, weight: 5.67 };
+//next we use these variables to create an array representing specific combinations of coins
+
+let change = [quarter, quarter, dime, penny, penny, penny];
+console.log(change[0].value);
+//alternative ways to alter the nested array
+quarter.weight = 50;
+console.log(quarter)
+change[0].weight = 100;
+console.log(quarter)
+
+//exploring nested objects in the console
+
+let nested = {
+    name: "Outer",
+    content: {
+        name: "Middle",
+        content: {
+            name: "Inner",
+            content: "Whoa..."
+        }
+    }
+};
+console.log(nested)
+//getting innermost content object proprety requrires long dot notation
+console.log(nested.content.content.content);
+
+//printing nested object with JSON.stringify
+console.log(JSON.stringify(nested));
