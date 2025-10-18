@@ -47,3 +47,11 @@ for (let i = 0; i < 10; i++) {
        console.log(`This is repititon $${i}`);
         
 }
+
+
+let firstName = "Bruce";
+let fName = firstName;
+for (fName of fNames) {
+console.log(fName);
+}
+console.log(fName)
