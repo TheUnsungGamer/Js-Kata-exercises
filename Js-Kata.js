@@ -289,3 +289,5 @@ console.log(nested.content.content.content);
 
 //printing nested object with JSON.stringify
 console.log(JSON.stringify(nested));
+
+

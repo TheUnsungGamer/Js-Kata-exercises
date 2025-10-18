@@ -1,0 +1,7 @@
+ let speed = 30;
+        console.log(`Your current speed is ${speed} mph.`);
+        if(speed > 25){
+        console.log("Slow down!");
+        }
+
+        
