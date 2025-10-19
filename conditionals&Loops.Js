@@ -35,7 +35,7 @@ let name = "Philadelphia";
 if (name.length > 10) {
        let message = `Hi ${name}, you have a really long name!`;
 }
-console.log(message)
+console.log(message);
 //fixed scope including the console log within the body of the if statement
 if (name.length > 10) {
        let message = `Hi ${name}, you have a really long name!`;
@@ -49,9 +49,8 @@ for (let i = 0; i < 10; i++) {
 }
 
 
-let firstName = "Bruce";
-let fName = firstName;
-for (fName of fNames) {
-console.log(fName);
+let firstNames = "Bruce";
+
+for (let firstName of firstNames){
+       console.log(firstName);
 }
-console.log(fName)
