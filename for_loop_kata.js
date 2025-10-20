@@ -1,5 +1,7 @@
-let name = "Bruce";
+let addCalls = 0;
 
-for(let char of name){
-   console.log(char + '\n');
+function add(x, y){
+   addCalls++;
+   console.log(`x was ${x} and y was${y}`);
+   return x + y;
 }
