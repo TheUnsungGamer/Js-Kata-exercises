@@ -9,3 +9,17 @@
       return x + y;
     }
 console.log(addExpression(1, 3));
+
+console.log(class Player {
+   constructor(startX, startY) {
+      this.x = startX;
+      this.y = thisY;
+   }
+   move(dx, dy) {
+      this.x += dx;
+      this.y += dy;
+   }
+}
+
+
+)

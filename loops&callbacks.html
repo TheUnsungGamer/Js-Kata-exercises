@@ -28,5 +28,74 @@ console.log(addExpression(1, 3));
     }
     console.log(addExpressionNamed(5, 5));
   </script>
+
+  <script>
+    setTimeout(function () {
+        console.log("Hi");
+    }, 2000);
+  </script>
+
+  <script>
+    let addArrow = (x, y) => {
+        return x + y;
+    };
+    console.log(addArrow(6, 2));
+  </script>
+  <script>
+    let addArrowConcise = (x, y) => x + y;
+  </script>
+
+
+<script>
+    let squared = x => x * x;
+    console.log(squared(3));
+</script>
+
+<script>
+let numbers = ["zero", "one", "two", "three", "four", "five"]
+function printNumber(num){
+return numbers[num];
+}
+console.log(printNumber(3))
+
+</script>
+
+<script>
+let addCalls = 0;
+
+function add(x, y){
+    addCalls++;
+    console.log(`x was ${x} and y was ${y}`);
+    return x + y;
+}
+let sum = add(Math.PI, Math.E);
+addCalls;
+console.log(sum)
+</script>
+
+
+
+<script>
+   let callCOunt = 0;
+    function callFunc(){
+for(let i = 0; i <= callCOunt; callCOunt++)
+console.log(callCOunt);
+return callCOunt;
+    }
+    console.log(callCOunt);
+    console.log(callCOunt);
+    console.log(callCOunt);
+    callCOunt;
+     callCOunt;
+      callCOunt;
+      
+
+    
+
+
+
+
+
+</script>
 </body>
 </html>
