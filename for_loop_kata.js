@@ -1,7 +1,6 @@
-let addCalls = 0;
-
-function add(x, y){
-   addCalls++;
-   console.log(`x was ${x} and y was${y}`);
-   return x + y;
-}
+   
+   //using a callback function to delay execution for 2 seconds
+   function sayhi(){
+        console.log("Hi!");;
+    }
+    setTimeout(sayhi, 2000);
