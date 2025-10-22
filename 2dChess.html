@@ -34,7 +34,37 @@
     player2.move(6, 8);
     console.log(player2.x);
     console.log(player2.y);
+    
+// inheritance mechanism in object oriented programming
 
-</script>    
+class Actor {
+    constructor(startX, startY) {
+        this.x = startX;
+        this.y = startY;  
+    }
+    move(dx, dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+// distance is calculated by horizontal distance (otherActor.x - this.x) and the
+//vertical distance (otherActor.y - this.y)    
+    distanceTo(otherActor) {
+        let dx = otherActor.x - this.x;
+        let dy = otherActor.y - this.y;
+// Math.hypot finds the length of the hypotenuse of the triangle formed by the two distances        
+        return Math.hypot(dx, dy);
+    }
+}
+
+
+</script>   
+<script>
+    class Player extends Actor {
+    constructor(startX, startY) {
+        super(startX, startY);
+        this.hp = 100;
+    }
+}
+</script> 
 </body>
 </html>
