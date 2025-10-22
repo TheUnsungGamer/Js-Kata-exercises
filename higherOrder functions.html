@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+ //rest parameters and higher order functions
+ let myColors = (name, ...favoriteColors) => {
+    let colorString = favoriteColors.join(", ");
+    return `My name is ${name} and my favorite colors are ${colorString}.`;
+ } 
+ console.log(myColors("Nick", "blue", "green", "orange"));  
+ </script>   
+
+ <script>
+    //console log shows rest parameter works as intended
+    console.log(myColors("Boring", "gray"));
+    console.log(myColors("Indecisive", "red", "orange", "yellow", "green", "blue", "indigo", "violet"));
+ </script>
+
+ <script>
+    //function loops through numbers array adding each number in the array for an output of 15
+    function sum(...numbers){
+        let total = 0;
+        for (let number of numbers){
+            total += number;
+        }return total;
+    }
+
+    console.log(sum(1, 2, 3, 4, 5))
+    console.log()
+ </script>
+
+ <script> 
+//Higher order functions
+//callback pass item => item.length > 6, takes advantage of syntatical featrures of arrow functions
+
+let shoppingList = ["Milk", "Sugar", "Bananas", "Ice Cream"];
+console.log(shoppingList.find(item => item.length > 6));
+//next we check for element that starts with letter "A", none of items match so undefined is returned
+
+console.log(shoppingList.find(item => item[0] === "A"));
+
+console.log(shoppingList.filter(item => item.length > 6));
+ </script>
+
+ <script>
+//callback function x => x * x * x, takes array element and cubes it. Map method applies callback    
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let cubes = numbers.map(x => x * x * x);
+console.log(cubes);
+ </script>
+</body>
+</html>
