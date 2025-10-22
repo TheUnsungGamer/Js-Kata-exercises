@@ -52,6 +52,54 @@ console.log(shoppingList.filter(item => item.length > 6));
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let cubes = numbers.map(x => x * x * x);
 console.log(cubes);
+ //callback is item => item.price which takes item and returns value of that items property
+let stockList = [
+{    name: "Cheese", price: 3},
+{    name: "Bread", price: 1},
+{    name: "Butter", price: 2},
+];
+let prices = stockList.map(item => item.price);
+console.log(prices);
+
  </script>
+
+ <script>
+    //console logs getting x2 times
+    function doubler(greeting) {
+       greeting();
+        greeting();
+    }
+    doubler(() => console.log("Hi there!"));
+
+    
+    </script>
+    <script>
+        //function callls x3 times 
+        function callMultipleTimes(times, callback) {
+            for (let i = 0; i < times;i++) {
+                callback(i);
+            }
+        }
+       callMultipleTimes(3, time => console.log(`This was time: ${time}`));
+    </script>
+    <script>
+        //functions that return functions
+        function makeAppender(suffix){
+            return function (text) {
+                return text + suffix;
+            };
+        }
+// calling inner function by 1st accessing it & calling the outer function 
+        let exciting = makeAppender("!!!");
+        console.log(exciting("Hello"));
+ //generating additional functions upending other suffixes besides "!!! as shown below 
+ let puzzling = makeAppender("???");
+ console.log(puzzling("Hello"));
+ let winking = makeAppender(";-)");
+ console.log(winking("Hello"));
+ console.log(winking("Goodbye")); 
+ console.log(puzzling("Goodbye"));     
+ console.log(exciting("Goodbye"));
+    </script>
 </body>
 </html>
