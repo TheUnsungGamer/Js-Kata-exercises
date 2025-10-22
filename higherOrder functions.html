@@ -101,5 +101,16 @@ console.log(prices);
  console.log(puzzling("Goodbye"));     
  console.log(exciting("Goodbye"));
     </script>
+
+
+<script>
+     let bracketWrapper = makeWrapper("[","]");
+    function makeWrapper(prefix, sufix){
+   // dont put  let bracketWrapper = makeWrapper("[","]"); in here..STACK OVERFLOW    
+    return function (text) {
+        return prefix + text + sufix;
+    }};
+    console.log(bracketWrapper("Bracket Me!"));
+    </script>
 </body>
 </html>
