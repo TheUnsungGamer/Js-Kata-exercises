@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //  addition function adding the value x & y outputting result
+function add(x, y) {
+    return x + y;
+}
+</script>    
+
+<script> 
+// booleans convert numerically outputting 1, true = 1 false = 0
+console.log(add(true, false));
+//type coercion concats integer 1 and the string "1" outputting 11
+console.log(add(1, `1`));
+
+console.log(add("Hello, ",  "World!")); 
+</script>
+
+<script>
+let addCalls = 0;
+
+function add(x, y){
+    addCalls++;
+    console.log(`x was ${x} and y was ${y}`);
+    return x + y;
+}
+//side effect addCalls increments by 1 every time add func is called
+let sum = add(Math.PI, Math.E);
+console.log(addCalls);
+console.log(sum);
+console.log(add(2, 5));
+console.log(addCalls);
+</script>
+</body>
+</html>
