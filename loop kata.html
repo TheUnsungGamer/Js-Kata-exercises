@@ -37,5 +37,31 @@ console.log(sum);
 console.log(add(2, 5));
 console.log(addCalls);
 </script>
+
+<script>
+    //function expressions
+    let addExpression = function(x, y) {
+        return x + y;
+    };
+    console.log(addExpression(1, 2));
+
+</script>
+
+<script>
+    let addExpressionNamed = function add(x, y) {
+        return x + y;
+    };
+    console.log(addExpressionNamed(3, 5));
+</script>
+<script>
+// Arrow functions
+let addArrow = (x, y) => {
+    return x + y;
+}    
+
+console.log(addArrow(5, 5));
+// if the body is written on same line & no braces, no return is needed
+let addArrowConcise = (x, y) => x + y;
+</script>
 </body>
 </html>
