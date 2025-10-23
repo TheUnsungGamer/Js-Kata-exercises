@@ -1,0 +1,1 @@
+This repo is my first and is intented to be a visual guide on my progress to become a full stack dev. Not really sure what im supposed to put here but im sure ill learn alot more along the way! Thanks everyone for reading my digital memory on this Earth.
