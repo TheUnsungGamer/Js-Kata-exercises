@@ -7,34 +7,7 @@
 </head>
 <body>
 <script> 
-//customery to start class names with Uppercase  
-    class Player {
-        constructor(startX, startY) {
-            this.x = startX;
-            this.y = startY;
-        }
 
-        move(dx, dy) {
-            this.x += dx;
-            this.y += dy;
-        }
-    }
-    //a new instance of Player class is created
-    let player1 = new Player(0, 0);
-    console.log(player1.x);
-    console.log(player1.y);
-//Move method updates objects x & y properties by adding dx & dy to  current values   
-    player1.move(3, 4);
-    console.log(player1.x);
-    console.log(player1.y);
-
-    let player2 = new Player(0, 0);
-    console.log(player2.x);
-    console.log(player2.y);
-    player2.move(6, 8);
-    console.log(player2.x);
-    console.log(player2.y);
-    
 // inheritance mechanism in object oriented programming
 
 class Actor {
@@ -59,6 +32,7 @@ class Actor {
 
 </script>   
 <script>
+    
     class Player extends Actor {
     constructor(startX, startY) {
         super(startX, startY);
